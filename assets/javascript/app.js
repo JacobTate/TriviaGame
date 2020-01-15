@@ -234,7 +234,7 @@ $(document).ready(function () {
         $(".title8").hide()
         $(".button8").hide();
         clearInterval(count_down);
-        endOfGame();
+        setTimeout(endOfGame, 3 * 1000)
     });
 
 
@@ -242,7 +242,7 @@ $(document).ready(function () {
     //====================================================
     //the interval
     function interval() {
-        timer = 30;
+        timer = 3;
         count_down = setInterval(time, 1000);
     }
     //the timer function
@@ -251,55 +251,52 @@ $(document).ready(function () {
         $("#timer").text("remaining time:" + timer);
         if (timer === 0) {
             clearInterval(count_down)
-            console.log("time")
             unanswered++
-            console.log(unanswered)
-            $("#timeOut").show();
-            setTimeout(timeout, 3 * 1000);
-            //
             if (timeout === 1) {
                 $(".button1").hide();
                 $(".title1").hide();
+                $("#timeOut1").show();
+                //setTimeout(clearTimeOut, 3 * 1000);
                 setTimeout(button2, 3 * 1000);
             } else if (timeout === 2) {
                 $(".button2").hide();
                 $(".title2").hide();
+                $("#timeOut2").show();
                 setTimeout(button3, 3 * 1000);
             } else if (timeout === 3) {
                 $(".button3").hide();
                 $(".title3").hide();
+                $("#timeOut3").show();
                 setTimeout(button4, 3 * 1000);
             } else if (timeout === 4) {
                 $(".button4").hide();
                 $(".title4").hide();
+                $("#timeOut4").show();
                 setTimeout(button5, 3 * 1000);
             } else if (timeout === 5) {
                 $(".button5").hide();
                 $(".title5").hide();
+                $("#timeOut5").show();
                 setTimeout(button6, 3 * 1000);
             } else if (timeout === 6) {
                 $(".button6").hide();
-                $(".title7").hide();
+                $(".title6").hide();
+                $("#timeOut6").show();
                 setTimeout(button7, 3 * 1000);
             } else if (timeout === 7) {
                 $(".button7").hide();
                 $(".title7").hide();
+                $("#timeOut7").show();
                 setTimeout(button8, 3 * 1000);
             } else if (timeout === 8) {
                 $(".button8").hide();
                 $(".title8").hide();
+                $("#timeOut8").show();
                 setTimeout(endOfGame, 3 * 1000);
             }
         }
 
     }
-
-    function timeout() {
-        timeout = 1;
-        $("#timeOut").hide();
-    }
-
-
     //shows the first buttons
     function button1() {
         $(".button1").show();
