@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //hides everything not need at this time
+    //hides everything not needed at this time
     //============================================
     $("#timer").hide();
     $(".button1").hide();
@@ -13,7 +13,8 @@ $(document).ready(function () {
     $("#correct").hide();
     $("#incorrect").hide();
     $("#timeOut").hide();
-
+    $("#reset").hide();
+    $("#endgame").hide();
     //variables
     //============================================
     var timer = 30;
@@ -21,9 +22,22 @@ $(document).ready(function () {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
-    var timeout = 0;
+    var timeout = 1;
     //onclick functions
     //======================================================================
+    //reset function
+    $("#reset").on("click", function () {
+        timer = 30;
+        correct = 0;
+        incorrect = 0;
+        unanswered = 0;
+        timeout = 1;
+        button1();
+        interval();
+        $("#endgame").hide();
+        $("#reset").hide();
+    });
+
     //runs when you press the start button
     $("#start").on("click", function () {
         interval();
@@ -110,8 +124,8 @@ $(document).ready(function () {
         }
     });
 
-     //runs when third buttons are hidden and the fourth buttons pop up
-     $(".button4").on("click", function () {
+    //runs when third buttons are hidden and the fourth buttons pop up
+    $(".button4").on("click", function () {
         var btn_clicked = $(this).val();
         //if the button clicked value is 1 you win
         if (btn_clicked === "2") {
@@ -182,8 +196,8 @@ $(document).ready(function () {
         }
     });
 
-      //runs when sixth buttons are hidden and the seventh buttons pop up
-      $(".button7").on("click", function () {
+    //runs when sixth buttons are hidden and the seventh buttons pop up
+    $(".button7").on("click", function () {
         var btn_clicked = $(this).val();
         //if the button clicked value is 1 you win
         if (btn_clicked === "2") {
@@ -217,9 +231,9 @@ $(document).ready(function () {
         else {
             incorrect++
             clearInterval(count_down);
-          $(".button8").hide();    
+            $(".button8").hide();
         }
-        $("#endgame").append("correct:" + correct + "<br>" + "incorrect:" + incorrect + "<br>" + "unanswered:" +  unanswered)
+        endOfGame();
     });
 
 
@@ -227,7 +241,7 @@ $(document).ready(function () {
     //====================================================
     //the interval
     function interval() {
-        timer = 30;
+        timer = 5;
         count_down = setInterval(time, 1000);
     }
     //the timer function
@@ -242,23 +256,41 @@ $(document).ready(function () {
             $("#timeOut").show();
             setTimeout(timeout, 3 * 1000);
             //
-            if(timeout === 0){
+            if (timeout === 1) {
                 $(".button1").hide();
                 setTimeout(button2, 3 * 1000);
-            }
-            else if(timeout === 1){
+            } else if (timeout === 2) {
                 $(".button2").hide();
                 setTimeout(button3, 3 * 1000);
+            } else if (timeout === 3) {
+                $(".button3").hide();
+                setTimeout(button4, 3 * 1000);
+            } else if (timeout === 4) {
+                $(".button4").hide();
+                setTimeout(button5, 3 * 1000);
+            } else if (timeout === 5) {
+                $(".button5").hide();
+                setTimeout(button6, 3 * 1000);
+            } else if (timeout === 6) {
+                $(".button6").hide();
+                setTimeout(button7, 3 * 1000);
+            } else if (timeout === 7) {
+                $(".button7").hide();
+                setTimeout(button8, 3 * 1000);
+            } else if (timeout === 8) {
+                $(".button8").hide();
+                setTimeout(endOfGame, 3 * 1000);
             }
         }
-        
+
     }
 
-    function timeout(){
+    function timeout() {
+        timeout = 1;
         $("#timeOut").hide();
     }
 
-  
+
     //shows the first buttons
     function button1() {
         $(".button1").show();
@@ -275,6 +307,7 @@ $(document).ready(function () {
 
     //shows the third buttons
     function button3() {
+        timeout++
         $(".button3").show();
         $("#correct").hide();
         $("#incorrect").hide();
@@ -284,32 +317,58 @@ $(document).ready(function () {
 
     //shows the fourth buttons
     function button4() {
+        timeout++
         $(".button4").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
     }
 
     //shows the fifth buttons
     function button5() {
+        timeout++
         $(".button5").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
     }
 
     //shows the sixth buttons
     function button6() {
+        timeout++
         $(".button6").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
     }
 
     //shows the seventh buttons
     function button7() {
+        timeout++
         $(".button7").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
     }
 
     //shows the eighth buttons
     function button8() {
+        timeout++
         $(".button8").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
+    }
+
+    function endOfGame() {
+        $("#timeOut").hide();
+        $("#endgame").append("correct:" + correct + "<br>" + "incorrect:" + incorrect + "<br>" + "unanswered:" + unanswered)
+        $("#reset").show();
     }
 
 
