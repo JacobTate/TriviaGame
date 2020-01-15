@@ -91,13 +91,13 @@ $(document).ready(function () {
         //if the button clicked value is 3 you win
         if (btn_clicked === "3") {
             correct++
-            $("#correct").show();
+            $("#correct1").show();
 
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect1").show();
         }
         $(".title1").hide()
         clearInterval(count_down);
@@ -112,12 +112,12 @@ $(document).ready(function () {
         //if the button clicked value is 1 you win
         if (btn_clicked === "1") {
             correct++
-            $("#correct").show();
+            $("#correct2").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect2").show();
         }
         $(".title2").hide()
         clearInterval(count_down);
@@ -131,12 +131,12 @@ $(document).ready(function () {
         //if the button clicked value is 1 you win
         if (btn_clicked === "4") {
             correct++
-            $("#correct").show();
+            $("#correct3").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect3").show();
         }
         $(".title3").hide()
         clearInterval(count_down);
@@ -150,12 +150,12 @@ $(document).ready(function () {
         //if the button clicked value is 1 you win
         if (btn_clicked === "2") {
             correct++
-            $("#correct").show();
+            $("#correct4").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect4").show();
         }
         $(".title4").hide()
         clearInterval(count_down);
@@ -169,12 +169,12 @@ $(document).ready(function () {
         //if the button clicked value is 1 you win
         if (btn_clicked === "3") {
             correct++
-            $("#correct").show();
+            $("#correct5").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect5").show();
         }
         $(".title5").hide()
         clearInterval(count_down);
@@ -188,12 +188,12 @@ $(document).ready(function () {
         //if the button clicked value is 1 you win
         if (btn_clicked === "2") {
             correct++
-            $("#correct").show();
+            $("#correct6").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect6").show();
         }
         $(".title6").hide()
         clearInterval(count_down);
@@ -207,12 +207,12 @@ $(document).ready(function () {
         //if the button clicked value is 1 you win
         if (btn_clicked === "2") {
             correct++
-            $("#correct").show();
+            $("#correct7").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect7").show();
         }
         $(".title7").hide()
         $(".button7").hide();
@@ -224,12 +224,12 @@ $(document).ready(function () {
         var btn_clicked = $(this).val();
         if (btn_clicked === "3") {
             correct++
-            $("#correct").show();
+            $("#correct8").show();
         }
         //else you lose
         else {
             incorrect++
-            $("#incorrect").show();
+            $("#incorrect8").show();
         }
         $(".title8").hide()
         $(".button8").hide();
@@ -259,27 +259,35 @@ $(document).ready(function () {
             //
             if (timeout === 1) {
                 $(".button1").hide();
+                $(".title1").hide();
                 setTimeout(button2, 3 * 1000);
             } else if (timeout === 2) {
                 $(".button2").hide();
+                $(".title2").hide();
                 setTimeout(button3, 3 * 1000);
             } else if (timeout === 3) {
                 $(".button3").hide();
+                $(".title3").hide();
                 setTimeout(button4, 3 * 1000);
             } else if (timeout === 4) {
                 $(".button4").hide();
+                $(".title4").hide();
                 setTimeout(button5, 3 * 1000);
             } else if (timeout === 5) {
                 $(".button5").hide();
+                $(".title5").hide();
                 setTimeout(button6, 3 * 1000);
             } else if (timeout === 6) {
                 $(".button6").hide();
+                $(".title7").hide();
                 setTimeout(button7, 3 * 1000);
             } else if (timeout === 7) {
                 $(".button7").hide();
+                $(".title7").hide();
                 setTimeout(button8, 3 * 1000);
             } else if (timeout === 8) {
                 $(".button8").hide();
+                $(".title8").hide();
                 setTimeout(endOfGame, 3 * 1000);
             }
         }
@@ -302,9 +310,9 @@ $(document).ready(function () {
         timeout++
         $(".title2").show();
         $(".button2").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct1").hide();
+        $("#incorrect1").hide();
+        $("#timeOut1").hide();
         interval();
     }
 
@@ -313,9 +321,9 @@ $(document).ready(function () {
         timeout++
         $(".title3").show();
         $(".button3").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct2").hide();
+        $("#incorrect2").hide();
+        $("#timeOut2").hide();
         interval();
     }
 
@@ -324,9 +332,9 @@ $(document).ready(function () {
         timeout++
         $(".title4").show();
         $(".button4").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct3").hide();
+        $("#incorrect3").hide();
+        $("#timeOut3").hide();
         interval();
     }
 
@@ -335,9 +343,9 @@ $(document).ready(function () {
         timeout++
         $(".title5").show();
         $(".button5").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct4").hide();
+        $("#incorrect4").hide();
+        $("#timeOut4").hide();
         interval();
     }
 
@@ -346,9 +354,9 @@ $(document).ready(function () {
         timeout++
         $(".title6").show();
         $(".button6").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct5").hide();
+        $("#incorrect5").hide();
+        $("#timeOut5").hide();
         interval();
     }
 
@@ -357,9 +365,9 @@ $(document).ready(function () {
         timeout++
         $(".title7").show();
         $(".button7").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct6").hide();
+        $("#incorrect6").hide();
+        $("#timeOut6").hide();
         interval();
     }
 
@@ -368,15 +376,17 @@ $(document).ready(function () {
         timeout++
         $(".title8").show();
         $(".button8").show();
-        $("#correct").hide();
-        $("#incorrect").hide();
-        $("#timeOut").hide();
+        $("#correct7").hide();
+        $("#incorrect7").hide();
+        $("#timeOut7").hide();
         interval();
     }
 
     function endOfGame() {
         $("#endgame").show();
-        $("#timeOut").hide();
+        $("#correct8").hide();
+        $("#incorrect8").hide();
+        $("#timeOut8").hide();
         $("#endgame").append("correct:" + correct + "<br>" + "incorrect:" + incorrect + "<br>" + "unanswered:" + unanswered)
         $("#reset").show();
     }
