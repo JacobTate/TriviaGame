@@ -1,0 +1,16 @@
+#correct{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+#incorrect{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+#timeOut{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+

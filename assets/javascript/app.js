@@ -10,6 +10,9 @@ $(document).ready(function () {
     $(".button6").hide();
     $(".button7").hide();
     $(".button8").hide();
+    $("#correct").hide();
+    $("#incorrect").hide();
+    $("#timeOut").hide();
 
     //variables
     //============================================
@@ -18,6 +21,7 @@ $(document).ready(function () {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
+    var timeout = 0;
     //onclick functions
     //======================================================================
     //runs when you press the start button
@@ -38,6 +42,7 @@ $(document).ready(function () {
             clearInterval(count_down);
             // timer = 30;
             $(".button1").hide();
+            $("#correct").show();
             setTimeout(button2, 3 * 1000);
 
         }
@@ -47,6 +52,7 @@ $(document).ready(function () {
             clearInterval(count_down);
             console.log("54")
             $(".button1").hide();
+            $("#incorrect").show();
             setTimeout(button2, 3000);
 
         }
@@ -230,23 +236,49 @@ $(document).ready(function () {
         $("#timer").text("remaining time:" + timer);
         if (timer === 0) {
             clearInterval(count_down)
-            console.log('time')
+            console.log("time")
             unanswered++
+            console.log(unanswered)
+            $("#timeOut").show();
+            setTimeout(timeout, 3 * 1000);
+            //
+            if(timeout === 0){
+                $(".button1").hide();
+                setTimeout(button2, 3 * 1000);
+            }
+            else if(timeout === 1){
+                $(".button2").hide();
+                setTimeout(button3, 3 * 1000);
+            }
         }
+        
     }
+
+    function timeout(){
+        $("#timeOut").hide();
+    }
+
+  
     //shows the first buttons
     function button1() {
         $(".button1").show();
     }
     //shows the second buttons
     function button2() {
+        timeout++
         $(".button2").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
     }
 
     //shows the third buttons
     function button3() {
         $(".button3").show();
+        $("#correct").hide();
+        $("#incorrect").hide();
+        $("#timeOut").hide();
         interval();
     }
 
@@ -279,7 +311,6 @@ $(document).ready(function () {
         $(".button8").show();
         interval();
     }
-
 
 
 
