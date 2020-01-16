@@ -1,17 +1,30 @@
-#correct{
-    width: 200px;
-    height: 200px;
-    background-color: red;
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045__340.png");
+    background-size: cover;
 }
-#incorrect{
-    width: 200px;
-    height: 200px;
-    background-color: blue;
+.container{
+    width:1400px;
+    height:950px;
+    background-color: khaki;
+    margin-top:10px;
+    text-align: center;
 }
-#timeOut{
-    width: 200px;
-    height: 200px;
-    background-color: green;
+#start{
+    width:200px;
+    height:40px;
+background: khaki;
+border-color: red;
+margin-top:200px;
+}
+.row{
+    margin-left:475px;
+}
+.title1, .title2, .title3 , .title4,
+.title5, .title6, .title7, .title8 {
+    margin-bottom:20px;
+}
+.btn{
+    font-size:24px;
 }
 img{
     width:300px;
