@@ -59,6 +59,7 @@ $(document).ready(function () {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
+    //timeout variable is used to tell the code which question is next when the time runs out
     var timeout = 1;
     //onclick functions
     //======================================================================
@@ -148,7 +149,7 @@ $(document).ready(function () {
 
     //the buttons for the third set of questions
     $(".button3").on("click", function () {
-          //gets the value of the button clicked and stores it in a variable
+        //gets the value of the button clicked and stores it in a variable
         var btn_clicked = $(this).val();
         //if the button clicked value is 4 show the correct3 screen and add the the correct guesses
         if (btn_clicked === "4") {
@@ -164,9 +165,9 @@ $(document).ready(function () {
         $(".title3").hide()
         //stops the timer 
         clearInterval(count_down);
-         //hides the buttons
+        //hides the buttons
         $(".button3").hide();
-         //calls the button3 function 
+        //calls the button3 function 
         setTimeout(button4, 3 * 1000);
     });
 
@@ -174,19 +175,19 @@ $(document).ready(function () {
     $(".button4").on("click", function () {
         //gets the value of the button clicked and stores it in a variable
         var btn_clicked = $(this).val();
-         //if the button clicked value is 2 show the correct4 screen and add the the correct guesses
+        //if the button clicked value is 2 show the correct4 screen and add the the correct guesses
         if (btn_clicked === "2") {
             correct++
             $("#correct4").show();
         }
-         //show the incorrect4 screen and add to the incorrect gusses
+        //show the incorrect4 screen and add to the incorrect gusses
         else {
             incorrect++
             $("#incorrect4").show();
         }
-         //hides the questions
+        //hides the questions
         $(".title4").hide()
-          //stops the timer 
+        //stops the timer 
         clearInterval(count_down);
         //hides the buttons
         $(".button4").hide();
@@ -198,12 +199,12 @@ $(document).ready(function () {
     $(".button5").on("click", function () {
         //gets the value of the button clicked and stores it in a variable
         var btn_clicked = $(this).val();
-         //if the button clicked value is 3 show the correct5 screen and add the the correct guesses
+        //if the button clicked value is 3 show the correct5 screen and add the the correct guesses
         if (btn_clicked === "3") {
             correct++
             $("#correct5").show();
         }
-       //show the incorrect5 screen and add to the incorrect gusses
+        //show the incorrect5 screen and add to the incorrect gusses
         else {
             incorrect++
             $("#incorrect5").show();
@@ -265,11 +266,11 @@ $(document).ready(function () {
         //calls the button8 function after 3 seconds
         setTimeout(button8, 3 * 1000);
     });
-//the eighth set of questions
+    //the eighth set of questions
     $(".button8").on("click", function () {
-         //gets the value of the button clicked and stores it in a variable
+        //gets the value of the button clicked and stores it in a variable
         var btn_clicked = $(this).val();
-           //if the value of the button clicked is 3 show the correct8 screen and add to the correct guesses
+        //if the value of the button clicked is 3 show the correct8 screen and add to the correct guesses
         if (btn_clicked === "3") {
             correct++
             $("#correct8").show();
@@ -281,11 +282,11 @@ $(document).ready(function () {
         }
         //hides the question
         $(".title8").hide()
-         //hides the buttons
+        //hides the buttons
         $(".button8").hide();
         //stops the timer
         clearInterval(count_down);
-         //calls the endOfGame function after 3 seconds
+        //calls the endOfGame function after 3 seconds
         setTimeout(endOfGame, 3 * 1000)
     });
 
@@ -294,61 +295,107 @@ $(document).ready(function () {
     //====================================================
     //the interval
     function interval() {
+        //resets the time
         timer = 30;
+        //calls the time function every second
         count_down = setInterval(time, 1000);
     }
-    //the timer function
+    //the time function
     function time() {
+        //subtracts from the timer
         timer--
-        $("#timer").text("remaining time:" + timer);
+        //displays the timer
+        $("#timer").text("remaining time: " + timer + "  seconds");
+        //if the time reaches 0 
         if (timer === 0) {
+            //stop the timer
             clearInterval(count_down)
+            //add to the unanswered
             unanswered++
+            //if the timeout variable is 1 when the time runs out
             if (timeout === 1) {
+                //hide the button and the question for the first page 
                 $(".button1").hide();
                 $(".title1").hide();
+                //show to timeout1 screen
                 $("#timeOut1").show();
+                //call the button2 function
                 setTimeout(button2, 3 * 1000);
-            } else if (timeout === 2) {
+            }
+            //if the timeout variable is 2 when the time runs out
+            else if (timeout === 2) {
+                //hide the button and the question for the second page 
                 $(".button2").hide();
                 $(".title2").hide();
+                //show to timeout2 screen
                 $("#timeOut2").show();
+                //call the button3 function
                 setTimeout(button3, 3 * 1000);
-            } else if (timeout === 3) {
+            }
+            //if the timeout variable is 3 when the time runs out
+            else if (timeout === 3) {
+                //hide the button and the question for the third page 
                 $(".button3").hide();
                 $(".title3").hide();
+                //show to timeout3 screen
                 $("#timeOut3").show();
+                //call the button4 function
                 setTimeout(button4, 3 * 1000);
-            } else if (timeout === 4) {
+            }
+            //if the timeout variable is 4 when the time runs out
+            else if (timeout === 4) {
+                //hide the button and the question for the fourth page 
                 $(".button4").hide();
                 $(".title4").hide();
+                //show to timeout4 screen
                 $("#timeOut4").show();
+                //call the button5 function
                 setTimeout(button5, 3 * 1000);
-            } else if (timeout === 5) {
+            }
+            //if the timeout variable is 5 when the time runs out
+            else if (timeout === 5) {
+                //hide the button and the question for the fifth page 
                 $(".button5").hide();
                 $(".title5").hide();
+                //show to timeout5 screen
                 $("#timeOut5").show();
+                //call the button6 function
                 setTimeout(button6, 3 * 1000);
-            } else if (timeout === 6) {
+            }
+            //if the timeout variable is 6 when the time runs out
+            else if (timeout === 6) {
+                //hide the button and the question for the sixth page 
                 $(".button6").hide();
                 $(".title6").hide();
+                //show to timeout6 screen
                 $("#timeOut6").show();
+                //call the button7 function
                 setTimeout(button7, 3 * 1000);
-            } else if (timeout === 7) {
+            }
+            //if the timeout variable is 7 when the time runs out
+            else if (timeout === 7) {
+                //hide the button and the question for the seventh page 
                 $(".button7").hide();
                 $(".title7").hide();
+                //show to timeout7 screen
                 $("#timeOut7").show();
+                //call the button8 function
                 setTimeout(button8, 3 * 1000);
-            } else if (timeout === 8) {
+            }
+            //if the timeout variable is 8 when the time runs out
+            else if (timeout === 8) {
+                //hide the button and the question for the eighth page 
                 $(".button8").hide();
                 $(".title8").hide();
+                //show to timeout8 screen
                 $("#timeOut8").show();
+                //call the endOfGame function
                 setTimeout(endOfGame, 3 * 1000);
             }
         }
 
     }
-    //shows the first buttons
+    //shows the first buttons and the first question
     function button1() {
         $(".button1").show();
         $(".title1").show();
@@ -358,9 +405,11 @@ $(document).ready(function () {
         timeout++
         $(".title2").show();
         $(".button2").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct1").hide();
         $("#incorrect1").hide();
         $("#timeOut1").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
@@ -369,9 +418,11 @@ $(document).ready(function () {
         timeout++
         $(".title3").show();
         $(".button3").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct2").hide();
         $("#incorrect2").hide();
         $("#timeOut2").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
@@ -380,9 +431,11 @@ $(document).ready(function () {
         timeout++
         $(".title4").show();
         $(".button4").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct3").hide();
         $("#incorrect3").hide();
         $("#timeOut3").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
@@ -391,9 +444,11 @@ $(document).ready(function () {
         timeout++
         $(".title5").show();
         $(".button5").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct4").hide();
         $("#incorrect4").hide();
         $("#timeOut4").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
@@ -402,9 +457,11 @@ $(document).ready(function () {
         timeout++
         $(".title6").show();
         $(".button6").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct5").hide();
         $("#incorrect5").hide();
         $("#timeOut5").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
@@ -413,9 +470,11 @@ $(document).ready(function () {
         timeout++
         $(".title7").show();
         $(".button7").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct6").hide();
         $("#incorrect6").hide();
         $("#timeOut6").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
@@ -424,18 +483,24 @@ $(document).ready(function () {
         timeout++
         $(".title8").show();
         $(".button8").show();
+        //hides the correct, incorrect and timeout screen
         $("#correct7").hide();
         $("#incorrect7").hide();
         $("#timeOut7").hide();
+        //calls the interval function (starts the timer)
         interval();
     }
 
     function endOfGame() {
+        //shows the endgame div
         $("#endgame").show();
+        //hides the correct, incorrcet and timeout screens
         $("#correct8").hide();
         $("#incorrect8").hide();
         $("#timeOut8").hide();
+        //displays the scores
         $("#endgame").append("correct:" + correct + "<br>" + "incorrect:" + incorrect + "<br>" + "unanswered:" + unanswered)
+        //shows the reset function
         $("#reset").show();
     }
 
