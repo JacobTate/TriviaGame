@@ -20,28 +20,35 @@
 </head>
 
 <body>
+    <!--the container-->
     <div class="container">
+        <!--the header-->
         <div class="header">
             <h1>Triva Game</h1>
         </div>
+        <!--the start button-->
         <button type="button" id="start" class="btn btn-primary btn-lg">start</button>
-        <p id="timer">remaining time: 30  seconds</p>
-
+        <!--the timer countdown-->
+        <p id="timer">remaining time: 30 seconds</p>
+<!--the first question-->
         <div class="title1">What was the first full lenght cgi movie?</div>
+        <!--the buttons for the first question-->
         <div class="row">
             <button class="button1 btn" value="1">A Bug's Life</button>
         </div>
         <div class="row">
             <button class="button1 btn" value="2">Monsters Inc.</button>
         </div>
+        <!--the correct answer-->
         <div class="row">
             <button class="button1 btn" value="3">Toy Story</button>
         </div>
         <div class="row">
             <button class="button1 btn" value="4">The Lion King</button>
         </div>
-
+<!--the second question-->
         <div class="title2">Which one is Not a name of one of the Spice Girls?</div>
+        <!--the buttons for the second question-->
         <div class="row">
             <button class="button2 btn" value="1">Fred Spice</button>
         </div>
@@ -54,8 +61,9 @@
         <div class="row">
             <button class="button2 btn" value="4">Posh Spice</button>
         </div>
-
+<!--the third question-->
         <div class="title3">Which NBA team won the most titles in the 90s?</div>
+        <!--the buttons for the third question-->
         <div class="row">
             <button class="button3 btn" value="1">New York Knicks</button>
         </div>
@@ -69,8 +77,9 @@
             <button class="button3 btn" value="4">Chicago Bulls</button>
         </div>
 
-
+<!--the fourth question-->
         <div class="title4">Which group relesased the git song, "Smells Like Teen Spirit."?</div>
+        <!--the buttons for the fourth question-->
         <div class="row">
             <button class="button4 btn" value="1">Backstreet Boys</button>
         </div>
@@ -84,9 +93,10 @@
             <button class="button4 btn" value="4">No Doubt</button>
         </div>
 
-
+<!--the fifth question-->
         <div class="title5">Which popular Disney movie featured the song, "Circle of life"?
         </div>
+        <!--the buttons for the fifth question-->
         <div class="row">
             <button class="button5 btn" value="1">Aladdin</button>
         </div>
@@ -100,10 +110,11 @@
             <button class="button5 btn" value="4">Mulan</button>
         </div>
 
-
+<!--the sixth question-->
         <div class="title6">Finish this line from the Fresh Prince of Bel-Air theme song: <br>
             "i whistled for a cab and when it came near, the license plate said..."?
         </div>
+        <!--the buttons for the sixth question-->
         <div class="row">
             <button class="button6 btn" value="1">Dice</button>
         </div>
@@ -117,8 +128,9 @@
             <button class="button6 btn" value="4">cab</button>
         </div>
 
-
+<!--the seventh question-->
         <div class="title7">What was Doug's best frend's name?</div>
+        <!--the buttons for the seventh question-->
         <div class="row">
             <button class="button7 btn" value="1">Mark</button>
         </div>
@@ -132,10 +144,11 @@
             <button class="button7 btn" value="4">Cody</button>
         </div>
 
-
+<!--the eighth question-->
         <div class="title8">what was the name of the principal at Bayside High in Saved By <br>
             The bell?
         </div>
+        <!--the buttons for the eighth question-->
         <div class="row">
             <button class="button8 btn" value="1">Mr.Zhou</button>
         </div>
@@ -154,89 +167,91 @@
 
         </div>
 
-        <div id="correct1">Yes!!<br>
-            The correct answer is:Toy story!<br>
+        <div class="result" id="correct1">Yes!!<br>
+            The correct answer is: Toy story!<br>
             <img src="assets/images/toystory.gif">
         </div>
-        <div id="correct2">Yes!!<br>
-            The correct answer is:Fred Spice<br>
+        <div class="result" id="correct2">Yes!!<br>
+            The correct answer is: Fred Spice<br>
             <img src="assets/images/spice.gif">
         </div>
-        <div id="correct3">Yes!!<br>
-            The correct answer is:Chicago Bulls<br>
+        <div class="result" id="correct3">Yes!!<br>
+            The correct answer is: Chicago Bulls<br>
             <img src="assets/images/bulls.gif">
         </div>
-        <div id="correct4">Yes!!<br>
-            The correct answer was:Nirvana<br>
+        <div class="result" id="correct4">Yes!!<br>
+            The correct answer was: Nirvana<br>
             <img src="assets/images/nirvana.gif">
         </div>
-        <div id="correct5">yes!!<br>
-            The correct answer is:The Lion King<br>
+        <div class="result" id="correct5">yes!!<br>
+            The correct answer is: The Lion King<br>
             <img src="assets/images/lionking.gif"></div>
-        <div id="correct6">yes!!<br>
-            The correct answer is:Fresh<br>
+        <div class="result" id="correct6">yes!!<br>
+            The correct answer is: Fresh<br>
             <img src="assets/images/fresh.gif"></div>
-        <div id="correct7">yes!!<br>
-            The correct answer is:Skeeter<br>
+        <div class="result" id="correct7">yes!!<br>
+            The correct answer is: Skeeter<br>
             <img src="assets/images/skeeter.gif"></div>
-        <div id="correct8">yes!!<br>
-            The correct answer is:Mr.Belding<br>
+        <div class="result" id="correct8">yes!!<br>
+            The correct answer is: Mr.Belding<br>
             <img src="assets/images/savedbythebell.gif"></div>
-        <div id="incorrect1">Nope!<br>
-            The correct answer is:Toy story!<br>
+        <div class="result" id="incorrect1">Nope!<br>
+            The correct answer is: Toy story!<br>
             <img src="assets/images/toystory.gif"></div>
-        <div id="incorrect2">Nope!<br>
-            The correct answer is:Fred Spice<br>
+        <div class="result" id="incorrect2">Nope!<br>
+            The correct answer is: Fred Spice<br>
             <img src="assets/images/spice.gif"></div>
-        <div id="incorrect3">Nope!<br>
-            The correct answer is:Chicago Bulls<br>
+        <div class="result" id="incorrect3">Nope!<br>
+            The correct answer is: Chicago Bulls<br>
             <img src="assets/images/bulls.gif">
         </div>
-        <div id="incorrect4">Nope!<br>
-            The correct answer was:Nirvana<br>
+        <div class="result" id="incorrect4">Nope!<br>
+            The correct answer was: Nirvana<br>
             <img src="assets/images/nirvana.gif">
         </div>
-        <div id="incorrect5">Nope!<br>
-            The correct answer is:The Lion King<br>
+        <div class="result" id="incorrect5">Nope!<br>
+            The correct answer is: The Lion King<br>
             <img src="assets/images/lionking.gif"></div>
-        <div id="incorrect6">Nope!<br>
-            The correct answer is:Fresh<br>
+        <div class="result" id="incorrect6">Nope!<br>
+            The correct answer is: Fresh<br>
             <img src="assets/images/fresh.gif"></div>
-        <div id="incorrect7">Nope!<br>The correct answer is:skeeter<br>
+        <div class="result" id="incorrect7">Nope!<br>
+            The correct answer is: skeeter<br>
             <img src="assets/images/skeeter.gif"></div>
-        <div id="incorrect8">Nope!<br>
-            The correct answer is:Mr.Belding<br>
+        <div class="result" id="incorrect8">Nope!<br>
+            The correct answer is: Mr.Belding<br>
             <img src="assets/images/savedbythebell.gif"></div>
 
 
 
-        <div id="timeOut1">Time Out!<br>
-            The correct answer is:Toy story!<br>
+        <div class="result" id="timeOut1">Time Out!<br>
+            The correct answer is: Toy story!<br>
             <img src="assets/images/toystory.gif"></div>
-        <div id="timeOut2">Time Out!<br>
-            The correct answer is:Fred Spice<br>
+        <div class="result" id="timeOut2">Time Out!<br>
+            The correct answer is: Fred Spice<br>
             <img src="assets/images/spice.gif"></div>
-        <div id="timeOut3">Time Out!<br>
-            The correct answer is:Chicago Bulls<br>
+        <div class="result" id="timeOut3">Time Out!<br>
+            The correct answer is: Chicago Bulls<br>
             <img src="assets/images/bulls.gif">
-        </div>
-        <div id="timeOut4">Time out!<br>
-            The correct answer was:Nirvana<br>
+        </div class="result">
+        <div class="result" id="timeOut4">Time out!<br>
+            The correct answer was: Nirvana<br>
             <img src="assets/images/nirvana.gif">
         </div>
-        <div id="timeOut5">Time Out!<br>
-            The correct answer is:The Lion King<br>
+        <div class="result" id="timeOut5">Time Out!<br>
+            The correct answer is: The Lion King<br>
             <img src="assets/images/lionking.gif"></div>
-        <div id="timeOut6">Time Out!<br>
-            The correct answer is:Fresh<br>
+        <div class="result" id="timeOut6">Time Out!<br>
+            The correct answer is: Fresh<br>
             <img src="assets/images/fresh.gif"></div>
-        <div id="timeOut7">Time Out!<br>The correct answer is:skeeter<br>
+        <div class="result" id="timeOut7">Time Out!<br>
+            The correct answer is: skeeter<br>
             <img src="assets/images/skeeter.gif"></div>
-        <div id="timeOut8">Time Out!<br>
-            The correct answer is:Mr.Belding<br>
+        <div class="result" id="timeOut8">Time Out!<br>
+            The correct answer is: Mr.Belding<br>
 
             <img src="assets/images/savedbythebell.gif"></div>
-        <button id="reset">reset</button>
+        <button id="reset" class="btn">Would You like to restart?</button>
     </div>
 </body>
 

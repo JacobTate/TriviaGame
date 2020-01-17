@@ -3,6 +3,7 @@ body {
     background-size: cover;
 }
 
+/*the container div*/
 .container {
     width: 1400px;
     height: 950px;
@@ -10,10 +11,13 @@ body {
     margin-top: 10px;
     text-align: center;
 }
-.header{
+
+/*the header*/
+.header {
     margin-bottom: 100px;
 }
 
+/*the start button*/
 #start {
     width: 200px;
     height: 40px;
@@ -24,13 +28,18 @@ body {
     font-family: 'Lora', serif;
     font-size: 32px;
 }
-#timer{
+
+/*the timer countdown*/
+#timer {
     font-size: 24px;
 }
+
+/*the button divs*/
 .row {
     margin-left: 475px;
 }
 
+/*the questions*/
 .title1,
 .title2,
 .title3,
@@ -44,12 +53,31 @@ body {
     font-size: 24px;
 }
 
+/*the correct incorrect and timeout screens*/
+.result {
+    font-size: 32px;
+
+}
+
+/*all of the buttons for all of the questions*/
 .btn {
     font-size: 24px;
     font-family: 'Lora', serif;
 }
 
-
+/*the gifs*/
 img {
+    margin-top: 10px;
     width: 300px;
+}
+
+/*the scores at the end of the game*/
+#endgame {
+    font-size: 32px;
+    line-height: 60px;
+}
+
+/*the reset button*/
+#reset {
+    margin-top: 30px;
 }
