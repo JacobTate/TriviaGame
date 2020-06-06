@@ -1,7 +1,8 @@
 # TriviaGame
 https://jacobtate.github.io/TriviaGame/.<br>
+<img src="./assets/images/Screenshot (6).png">
 javascript game
-# Created by Jacob Tate for homework
+# Created by Jacob Tate
 
 When You load the game You will see a start button.<br>
 When you click it a 30 second timer will start you will see a question and four answers.<br>
